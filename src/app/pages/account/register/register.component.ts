@@ -47,10 +47,10 @@ sendData(myform){
         localStorage.setItem('userid', this.userId);
         localStorage.setItem('userName',NameUser);
         localStorage.setItem('token',token);
-        this.store.dispatch(new AuthCheckingUser({userLogged:true}))
         this.error = false;
         this.router.navigate(['/']);
       }, (err) => {
+        console.log(err)
         this.error = true;
         this.message = err.error.errorMessage;
       })
