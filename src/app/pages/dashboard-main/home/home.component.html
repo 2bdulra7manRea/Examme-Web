@@ -221,7 +221,7 @@
            <button *ngIf="room.userName===userName || userName==='ADMIN'" style="display: inline-block;"  class="btn btn-warning" (click)="deleteMyRoom(room._id,room.userName)" >Delete</button>
         </div> 
         <div  class="col-2">
-            <a class="btn btn-primary" style="display: block;" [routerLink]="['/app/chat',room._id]">Join</a>
+            <a class="btn btn-primary" style="display: block;" [routerLink]="['/app/chat-rooms/chat',room._id]">Join</a>
          </div> 
     
         </div>
