@@ -1,0 +1,60 @@
+$colorSide:rgb(233, 211, 183);
+.sidebar{
+    background-color: purple;
+    position:absolute;
+    width:100%;
+    height:600px;
+    padding:20px;
+    ul{
+        padding:10px;
+        list-style: none;
+        li{
+            margin:20px 0px;
+             a{
+            width:100%;
+            padding:5px;
+            text-decoration: none;
+            color:white;
+            display: block;
+            font-size:20px;
+            transition:1s ease-in-out;
+            &:hover{
+                color: red;
+                border-bottom:1px solid red;
+            }
+        }  
+        }
+        
+     
+    }
+}
+
+.k-b{
+    background-color: rgb(246, 246, 246);
+    width:200px;
+    height:600px;
+    position: absolute;
+    z-index:2;
+    right:0px;
+    transform: translateX(100px);
+    border-radius:50%;
+}
+
+.btn2{
+    background-color: rgb(116, 20, 20);
+    color: white;
+}
+
+.main-nav{
+    background-color: white;
+    padding:10px;
+    box-shadow:1px 1px 1px lightgrey;
+}
+@media only screen and (max-width:1050px){
+    
+.sidebar{
+    display: none;
+}
+
+
+}

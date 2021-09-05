@@ -4,18 +4,19 @@
     box-sizing: border-box;
 }
 
-.container{
-    width:100%;
-    background-color: rgb(20, 19, 29);
-    display: flex;
-    justify-content: center;
-    min-height:660px;
+.container-fluid{
 }
 
 .blogs{
-    width:80%;
-    background-color: whitesmoke;
+    width:100%;
     padding:10px;
+}
+.card-post{
+    padding:5px;
+    background-color: white;
+    border-radius:20px;
+    box-shadow:2px 2px 2px lightgrey;
+    margin:10px 0px;
 }
 
 

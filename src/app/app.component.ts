@@ -26,7 +26,7 @@ export class AppComponent implements OnInit, OnDestroy{
   ngOnDestroy() {
     if (this.userLogged === true) {
       //this.Socket.connectTHEservers(this.NameUser);
-      this.Socket.disconnectSocket();
+      //this.Socket.disconnectSocket();
     }
   }
 

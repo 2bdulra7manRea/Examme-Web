@@ -1,0 +1,44 @@
+
+<div class="container-fluid">
+ <div class="row main-nav">
+   <div class="col-3">
+     <h1 style="font-size:30px !important;" >E<span style="font-size:30px !important ; color:orange; font-weight: bold;">X</span>AMME</h1>
+   </div>
+   <div class="col-6">
+     
+  </div>
+  <div class="col-2">
+    <a [routerLink]="['/app/myaccount',userId]" class="btn"   *ngIf="!!userName">{{userName}}</a>
+     <img src="../../../../assets/img/Person.png" style="border-radius:50%;" width="30px" height="30px">
+  </div>
+
+    <button class="col-1 btn  btn-primary" (click)='LogOut()' >Log Out</button>
+
+ </div> 
+
+
+<div class="row">
+  <div class="col-3" style="position:relative;overflow: hidden; ;padding:0px !important; ">
+    <div class="sidebar">
+
+      <ul style="height:70%;">
+        <li><a routerLink='/app'>Dashboard </a></li>
+        <li><a routerLink='/app/exam'>EXAMS Studio </a></li>
+        <li><a routerLink='/app/chat-rooms'>Chat Rooms </a></li>
+        <li><a routerLink='/app/blogs/list'>Learning momenets</a></li>
+      </ul>
+
+      <div style="height:20%; text-align: center;" >
+        <h1  style="color: white;">E<span style="color: orange;">X</span>AMME</h1>
+      </div>
+
+    </div>
+    <div class="k-b"></div>
+  </div>
+  <div class="col-lg-9" style="padding:20px;">
+  <router-outlet></router-outlet>   
+  </div>
+</div>
+
+
+</div>

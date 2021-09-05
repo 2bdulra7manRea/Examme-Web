@@ -8,18 +8,14 @@
 .container{
     display: flex;
     justify-content: center;
-    background-color: rgb(250, 250, 250);
-    padding-bottom:100px;
 }
 .myProfile{
-    width:80%;
-    background-color: white;
+    width:90%;
 }
 
 
 .otherProfile{
-    background-color: white;
-    width:70%;
+    width:90%;
 }
 .bigImg{
     width:100%;
@@ -136,4 +132,16 @@ a{
     text-decoration: none;
 }
 
+}
+
+.exam-card{
+    margin:5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:150px;
+    height:150px;
+    border-radius:20px;
+    background-color: white;
+    box-shadow:1px 1px 1px lightgrey;
 }

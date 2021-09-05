@@ -1,13 +1,30 @@
 
 <div class="container">
 
+<div class="row" style="margin:20px 0px;">
+    <div class="col-12">
+        <h1>Creating Post </h1>
+    </div>
+</div>
 
-<form>
+<div class="alert alert-danger"  *ngIf="errorFound" role="alert">
+    Please make sure the content is not empty !
+  </div>
+
+<div class="post-create">
 <input type="text" [(ngModel)]='title' name="title" placeholder="Title">   
-<textarea  rows="17" [(ngModel)]='blog' name="content"></textarea>
-<button (click)="CreateBlog()">Create a blog</button>
-</form>
 
+<ckeditor
+    [(data)]="editorData"
+></ckeditor>
+
+
+
+
+
+<button class="btn btn-primary" (click)="CreateBlog()">Save</button>
+
+</div>
 
 
 

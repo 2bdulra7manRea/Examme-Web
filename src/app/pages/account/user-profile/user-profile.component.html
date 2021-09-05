@@ -15,15 +15,28 @@
     <button (click)="GetFollowers()"class="followers" >{{followers}}  followers </button>
     <button (click)="GetFollowing()"class="followers" >{{following}}  following </button>
 </div>
-<div class="myExams" *ngIf="examsFound===true">
-<div class="cardExam" *ngFor="let item of exams" >
-    <h4>{{item.title}}</h4>
-    <h4>{{item.type}}</h4>
-    <a [routerLink]="['/exam/info/',item._id]">more Info</a>
+<div>
+<div style="background-color: wheat;padding:20px;">
+    <div class="col-12">
+        <h1>My Exams</h1>
+    </div>
+</div>   
+
+
+ <div style=" display: flex;  background-color: white; overflow-x: auto;" *ngIf="examsFound===true">
+<div class='exam-card'  *ngFor="let item of exams"  >
+    <a class="btn" [routerLink]="['/app/exam/info/',item._id]"  >{{item.title}}</a>
 </div>
 
 
+</div>   
+<div class="row" *ngIf="examsFound===false">
+    <div class="col-12" style="text-align: center;">
+        <p>No exams be found </p>
+    </div>
 </div>
+</div>
+
 
 </div>
 

@@ -1,8 +1,6 @@
-<div class="container">
-
+<!--
+    <div class="container">
 <div class="exam-dashboard">
-
-
 <nav #nav>
 <span class="navbtn"><button #btn1 (click)="toggleNav()" >close</button></span>    
 <ul>
@@ -29,15 +27,55 @@
 
 
 <section class="main-dash">
-<router-outlet></router-outlet>
+
 </section>
 
 
 
 
 </div>
+</div>
+-->
+
+<div class="container">
 
 
+<div class="row">
+<div class="col-12">
+<h1>Exams Studio</h1>
+</div>    
+
+</div>
+
+
+<div class="row">
+    <div class="col-12" style="padding:20px; text-align: end; ">
+    <a routerLink='/app/exam/create' style="display: inline-block; padding:5px; " class="btn btn-primary" >Create</a>
+    </div>    
+    
+</div>
+
+<h4>My Exams</h4>
+
+    <div class="row" >
+        <div class="col-12 d-flex" style="flex-wrap: wrap;">
+        <app-exam-card *ngFor="let item of myExams" [item]='item'></app-exam-card>
+        </div>
+        </div>
+
+
+
+<div class="row" style="margin:30px 0px; ">
+    <div class="col-12">
+        <hr>
+    </div>
+</div>
+<h4>General Exams</h4>
+<div class="row" >
+<div class="col-12 d-flex" style="flex-wrap: wrap;">
+<app-exam-card *ngFor="let item of generalExams" [item]='item'></app-exam-card>
+</div>
+</div>
 
 
 

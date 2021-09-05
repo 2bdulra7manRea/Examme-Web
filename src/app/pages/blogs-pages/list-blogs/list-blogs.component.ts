@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as moment from 'moment';
 import { BaseApi } from 'src/app/core/networks/baseApi.service';
 
 @Component({
@@ -18,6 +19,9 @@ loading:boolean=true;
     })
   }
 
+  convertTime(d){
+    return moment(d).fromNow()
+  }
 
 
 

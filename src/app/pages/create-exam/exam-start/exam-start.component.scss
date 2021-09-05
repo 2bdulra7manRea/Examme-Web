@@ -1,6 +1,5 @@
 .container{
     width:100%;
-    background-color: rgb(47, 49, 53);
     min-height:1200px;
     display: flex;
     justify-content: center;
@@ -18,7 +17,7 @@
 }
 
 label{
-    color: white;
+    color: black;
     font-size: 1.4rem;
     display: block;
     text-transform: capitalize;
@@ -63,10 +62,8 @@ header{
 
 .loading{
     width:500px;
-    background-color: rgba(20, 20, 26, 0.781);
     height:500px;
     cursor: pointer;
-    box-shadow:2px 2px 2px rgb(69, 72, 78);
     margin:100px 0px;
     display: flex;
     justify-content: center;
@@ -74,8 +71,7 @@ header{
     text-align: center;
     h1{
         font-size:2rem;
-        color: white;
-        color: rgb(132, 255, 183);
+       color: black; 
     }
 }
 .msq{

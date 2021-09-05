@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BaseApi } from 'src/app/core/networks/baseApi.service';
-
+import * as moment from 'moment';
 @Component({
   selector: 'app-exam-info',
   templateUrl: './exam-info.component.html',
@@ -11,7 +11,12 @@ export class ExamInfoComponent implements OnInit {
 exam:any;
 loading:boolean=false;
 IdExam:string;
-  constructor(protected router:Router,private activeRout:ActivatedRoute,private httpService:BaseApi) { }
+userId:any;
+userName:any;
+  constructor(protected router:Router,private activeRout:ActivatedRoute,private httpService:BaseApi) { 
+    this.userId=localStorage.getItem('userid');
+    this.userName=localStorage.getItem('userName');
+  }
 
   ngOnInit(): void {
    this.getIdOfExam(); 
@@ -50,6 +55,10 @@ this.loading=true;
 }
 
 
+
+timeConvert(t){
+return moment(t).fromNow()
+}
 
 
 

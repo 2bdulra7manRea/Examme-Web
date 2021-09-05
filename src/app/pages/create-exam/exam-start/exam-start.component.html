@@ -20,9 +20,9 @@
 <div class="box-start" *ngFor="let item of Exam.questions.questions" #x>
     <form #myform='ngForm'>
     <label>{{item.question}}</label>
-    <input ngModel name='answer' placeholder="Enter yout answer" type="text">
+    <input ngModel style="width:100%;" autocomplete="off" name='answer' placeholder="Enter yout answer" type="text">
     </form>
-    <button (click)='submitAnswer(item.answer,item.question,myform,x)'>Submit</button>
+    <button style="margin-top:10px;" (click)='submitAnswer(item.answer,item.question,myform,x)'>Submit</button>
 </div>
 </div>
 
@@ -33,7 +33,7 @@
     <div class="box-start"  *ngFor="let item of Exam.questions.questions" #h>
     <form #msq="ngForm" class="msq">
         <label>{{item.question}}</label>
-       <select ngModel name="MSQ">
+       <select ngModel style="width:100%;" autocomplete="off" name="MSQ">
             <option [value]="item.answerWrong2"  >{{item.answerWrong2}}</option>
            <option [value]="item.answerRight" >{{item.answerRight}}</option>
            <option [value]="item.answerWrong1"  >{{item.answerWrong1}}</option>

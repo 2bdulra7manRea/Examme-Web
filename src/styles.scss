@@ -1,18 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+@import"/node_modules/bootstrap/scss/bootstrap.scss";
 
 *{
     padding:0px;
     margin:0px;
+    font-size:14px !important;
     box-sizing: border-box;
 }
 body{
     margin:0px !important;
     scroll-behavior: smooth;
-    background-color:rgb(20, 20, 29);
+    background-color:rgb(246, 246, 246);
 }
 
 ::selection{
-    background-color: darkorange;
+    background-color: rgba(206, 117, 206, 0.767)
+}
+
+
+.btn-primary{
+    background-color: purple !important;
+    color: white !important;
+    border-radius:20px;
+    border: none;
+    outline: none;
 }
 
 .center_box{
@@ -29,18 +40,18 @@ body{
     }
     
     ::-webkit-scrollbar-thumb{
-        background: rgb(45, 45, 71);
+        background:rgb(189, 44, 189);
         border-radius:10px;
     
     }
     
     ::-webkit-scrollbar-track{
-        background-color:rgba(38, 38, 59, 0.76) ;
+        background-color:whitesmoke ;
         box-shadow:inset 1px 1px 1px gray;
     }
 
     ::-webkit-scrollbar-thumb:hover{
-        background: rgb(19, 15, 41);
+        background: purple;
     }
 
     .snox{
@@ -76,3 +87,6 @@ body{
         font-size:1rem;
         margin:2px;
     }
+
+
+    

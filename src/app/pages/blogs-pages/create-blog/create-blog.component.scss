@@ -1,11 +1,15 @@
 .container{
     width:100%;
     background-color: whitesmoke;
-    height:600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.post-create{
+    width:80%;
+    padding:20px;
 }
 
 form{

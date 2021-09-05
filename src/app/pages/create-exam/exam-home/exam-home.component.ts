@@ -40,8 +40,7 @@ id:id,
 }
 
 this.httpService.CreateExams(body).subscribe((vl)=>{
-console.log(vl)
-this.rout.navigateByUrl('/')
+this.rout.navigateByUrl('/app/exam')
 })
 }
 

@@ -8,7 +8,7 @@ import { environment } from "src/environments/environment";
 @Injectable()
 export class BaseApi{
 
-url:string='http://examme.herokuapp.com/';
+url=environment.baseUrl
 protected idUser:string=localStorage.getItem('userid');
 
 

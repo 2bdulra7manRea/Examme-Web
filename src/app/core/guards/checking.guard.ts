@@ -12,7 +12,7 @@ canActivate(rout:ActivatedRouteSnapshot,state:RouterStateSnapshot):Observable<bo
 
 let observeChack=new Observable((sub:Subscriber<boolean>)=>{
 let token=localStorage.getItem('token');
-if(token){
+if(!!token){
     sub.next(false)
     this.router.navigate(['/'])
 }else{

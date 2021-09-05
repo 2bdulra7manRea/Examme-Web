@@ -1,0 +1,36 @@
+<div class="exam-card">
+
+
+<div class="row"  style="height: 70%;" >
+    <div class="col-12" style="display:flex; align-items: center; justify-content: center;">
+        <p>{{item.title}}</p>
+    </div>
+ </div>
+
+<div class="row" style="margin:5px 0px;">
+    <div class="col-12">
+        <hr>
+    </div>
+</div> 
+
+<div class="row" *ngIf="!!item.examOwner">
+<div class="col-4"  style="text-align: center;">
+    <button (click)='routToStart()' class="b-icon" >
+        <fa-icon style="font-size:20px;" [icon]="faFileAlt"></fa-icon>
+    </button>
+</div>
+<div class="col-4" style="text-align: center;">
+    <button (click)='routToInfo()' class="b-icon" >
+        <fa-icon style="font-size:20px;" [icon]="faEye"></fa-icon>
+    </button>
+</div>
+
+<div class="col-4" *ngIf="userId===item.examOwner._id" style="text-align: center;">
+    <button (click)='routToCreate()' class="b-icon" >
+        <fa-icon style="font-size:20px;" [icon]="faEdit"></fa-icon>
+    </button>
+</div>
+
+</div>
+
+</div>

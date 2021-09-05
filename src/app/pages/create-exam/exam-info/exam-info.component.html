@@ -2,8 +2,13 @@
 
 <div class="box-info">
 <h2>{{exam.title}}</h2>
-<span><button (click)="deleteExam()" class="delete">Delete</button></span>
+<span><button (click)="deleteExam()" *ngIf="userId===exam.examOwner._id || userName==='ADMIN'"  class="delete">Delete</button></span>
 <table class="tree">
+
+    <tr>
+        <th>Created by</th>
+        <td>{{exam.examOwner.name}}</td>
+    </tr>
    <tr>
        <th>Type</th>
        <td>{{exam.type}}</td>
@@ -29,7 +34,7 @@
 </tr>
 <tr>
     <th>Time created</th>
-    <td>{{exam.timeCreated|slice:0:10}}</td>
+    <td>{{timeConvert(exam.timeCreated)}}</td>
 </tr>
 <tr>
     <th>Number of questions</th>

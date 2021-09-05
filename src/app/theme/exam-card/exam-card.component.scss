@@ -1,0 +1,25 @@
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+
+.exam-card{
+    background-color: white;
+    box-shadow:2px 2px 2px rgb(238, 238, 238),-2px -2px 2px lightgray;
+    border-radius:20px;
+    width:200px;
+    margin:20px;
+    height:200px;
+}
+
+.h{
+    height:60% !important;
+}
+
+.b-icon{
+    background-color: transparent;
+    color: rgb(44, 35, 61);
+    border: none;
+    outline: none;
+}

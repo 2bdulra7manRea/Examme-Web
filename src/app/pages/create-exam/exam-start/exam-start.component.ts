@@ -33,7 +33,7 @@ this.loading=false;
 this.message='';
 console.log(this.Exam)
 }else{
-this.message='You must implement the questions first !'
+this.message='No Questions Be Found !'
 this.loading=true;
 }
 
@@ -53,13 +53,13 @@ alert('Error')
     console.log(question)
     console.log(myform.value)
     this.progress++;
-    
-    if(answer===myform.value['answer']){
+    ''
+    if(answer.toLowerCase()===myform.value['answer'].toLowerCase()){
       x.textContent='Perfect'
-      x.style.color='rgb(132, 255, 183)';
+      x.style.color='blue';
       this.myscore++;
     }else{
-      x.textContent='Wrong ! the Right answer => ' + answer;
+      x.textContent='Wrong ! the right answer => ' + answer;
       x.style.color='red';
       x.style.backgroundColor='white';
     }
@@ -69,7 +69,7 @@ alert('Error')
   SubmitMsq(msq,answerRight,h:HTMLDivElement){
     this.progress++;
 if(msq.value.MSQ!==''){
-if(msq.value.MSQ===answerRight){
+if(msq.value.MSQ.toLowerCase() ===answerRight.toLowerCase()){
   console.log('perfect')
 h.textContent='Perfect';
 h.style.backgroundColor='yellow';

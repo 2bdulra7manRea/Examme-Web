@@ -1,27 +1,60 @@
 
 
-<div class="container">
-
-<aside>
-<a class="createBlog" routerLink='/list/blog/create'>Create my blog</a>     
-</aside>   
+<div class="container-fluid">
 
 
+<div class="row">
+    <div class="col-12">
+        <h1>My Learning Moments</h1>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-12" style="text-align: end;">
+        <a routerLink='/app/blogs/list/create' style= "padding:5px ;display: inline-block;" class="btn btn-primary" >Create</a>
+    </div>
+</div>
+
+<div class="row" style="margin:10px 0px;">
+    <div class="col-12">
+       <hr>
+    </div>
+</div>
+
+
+
+<div class="row">
+    <div class="col-lg-1"></div>
+    <div class="col-lg-10">
 <div class="blogs" *ngIf="loading===false">
 
-<section class="box-blog" *ngFor="let item of blogs">
-<div class="header-blog">
-    <h6>{{item.user.name}}</h6>
-    <p>{{item.date | date }}</p>
+<section class="card-post" *ngFor="let item of blogs">
+    <div class="row">
+        <div class="col-6">
+         <img width="40px" height="40px" style="margin:0px 10px;border-radius:50%;" src="../../../../assets/img/Person.png">   
+         <b>{{item.user.name}}</b>   
+        </div>
+        <div class="col-3"></div>
+        <div class="col-3">
+            {{convertTime(item.date)}}
+        </div>
+    </div>
+<div class="row" style="margin:5px 0px;"> 
+    <div class="col-12">
+        <hr>
+    </div>
 </div>
 <div class="body-blog">
-    <h4>{{item.title}}</h4>
-    <h6>{{item.content| slice:0:200 }}... </h6>
-    <a [routerLink]="['/blog',item._id]" >Read more</a>
-</div>
-<div class="footer-blog"></div> 
-    
 
+    <h4>{{item.title}}</h4>
+    <ckeditor
+    [data]="item.content"
+    readOnly="true"
+    type="inline"
+></ckeditor>
+
+</div>
 
 
 
@@ -32,5 +65,12 @@
 </div>
 
 
+    </div>
+    <div class="col-lg-1"></div>
+</div>
+
+
+
 
 </div>
+

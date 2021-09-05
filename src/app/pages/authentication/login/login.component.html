@@ -1,0 +1,47 @@
+<div class="container">
+
+<div class="row">
+    <div class="col-12">
+        <h1 style="font-size:70px;">E<span style="color: orange;">X</span>AMME</h1>
+    </div>
+</div>
+
+
+<div class="alert alert-danger" *ngIf="errorISFound" role="alert">
+    Please there is something wrong in password or E-mail ! check it out!
+  </div>
+
+<div class="row" style="margin:20px 0px;">
+    <div class="col-12" style="text-align: center;">
+        <h1>Log in </h1>
+    </div>
+</div>
+
+<div class="row">
+
+
+
+<div class="col-12 form" >
+
+<form [formGroup]='loginForm'  >
+    <div class="form-floating mb-3 mt-5">
+        <input type="email" class="form-control" autocomplete="off"  formControlName="email" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">Email address</label>
+      </div>
+      <div class="form-floating mb-5 mt-5">
+        <input type="password" class="form-control" autocomplete="off" #pass formControlName="password" id="floatingPassword" placeholder="Password">
+        <label for="floatingPassword">Password</label>
+      </div>
+ 
+</form>
+     <div class="col-12 mt-5" style="text-align: center;">
+        <button type="submit" (click)="submit()" class="btn btn-primary">Sign in</button>
+     </div>
+        <div class="col-12 mt-5" >
+            <b> You Don`t have account ! </b> <a routerLink='/auth2/register'>sign up</a>
+        </div>
+</div>
+
+
+</div>
+</div>
